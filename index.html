@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Recipes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="modal hidden" id="recipe-modal">
+  <div class="modal-content fullscreen">
+    <button class="close-btn" id="close-modal">✖</button>
+    <div class="modal-grid">
+      <img id="modal-image" src="" alt="Recipe Image" />
+      <div class="modal-info">
+        <h2 id="modal-title">Recipe Title</h2>
+       <div class="recipe-sections">
+  <div class="section-box">
+    <h3>🍓 Ingredients</h3>
+    <pre id="modal-ingredients"></pre>
+  </div>
+  <div class="section-box">
+    <h3>🧁 Directions</h3>
+    <pre id="modal-directions"></pre>
+  </div>
+  <div class="section-box">
+    <h3>✨ Tips</h3>
+    <pre id="modal-tips"></pre>
+  </div>
+
+</div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<div class="recipe-app">
+
+<header>
+  <h1>Moonberry Café</h1>
+
+  <form class="search-form" id="searchForm">
+    <input type="search" placeholder="Search recipes..." class="search-input" id="searchInput" />
+    <button type="submit" class="search-button">Search</button>
+  </form>
+</header>
+
+  <main>
+    <!-- FEATURED -->
+ <section class="hero-card">
+  <div>
+    <p class="tag">featured recipe</p>
+    <h2>Strawberry Pancakes</h2>
+    <p class="hero-description">
+      Fluffy pancakes with whipped cream, maple syrup, and fresh strawberries 🍓
+    </p>
+    <button class="recipe-btn"
+      data-title="Strawberry Pancakes"
+      data-img="https://mykidslickthebowl.com/wp-content/uploads/2020/10/strawberry-pancakes-25-1024x1024.jpg"
+      data-category="featured"
+      data-ingredients="1 cup flour
+2 tbsp sugar
+1 tsp baking powder
+1 egg
+1 cup milk
+Butter for cooking
+Fresh strawberries
+Whipped cream
+Maple syrup"
+      data-directions="Mix flour, sugar, and baking powder.
+Add egg and milk and whisk until smooth.
+Heat pan and melt butter.
+Pour batter and cook until golden brown on both sides.
+Stack pancakes and top with strawberries, whipped cream, and syrup."
+      data-tips="Do not overmix batter for fluffy pancakes.
+Cook on medium heat for even browning.
+Serve immediately for best texture.">
+      Recipe
+    </button>
+  </div>
+  <img
+    src="https://mykidslickthebowl.com/wp-content/uploads/2020/10/strawberry-pancakes-25-1024x1024.jpg"
+    alt="Pancakes"
+  />
+</section>
+
+    <!-- RECIPES -->
+    <section>
+      <h3 class="section-title">𐙚 𝚖𝚢 𝚏𝚊𝚟𝚘𝚞𝚛𝚒𝚝𝚎 𝚛𝚎𝚌𝚒𝚙𝚎𝚜! 𐙚</h3>
+<div class="filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="cakes">Cakes</button>
+  <button class="filter-btn" data-filter="desserts">Desserts</button>
+  <button class="filter-btn" data-filter="drinks">Drinks</button>
+  <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+</div>
+      <div class="recipe-grid">
+
+        <!-- 1 -->
+<div class="recipe-card">
+  <img src="https://sugargeekshow.com/wp-content/uploads/2020/01/pink-velvet-cake-featured.jpg" alt="Pink Velvet Cake" />
+  <h4>Pink Velvet Cake</h4>
+  <p>Soft vanilla cake with strawberry frosting.</p>
+  <button class="recipe-btn"
+    data-title="Pink Velvet Cake"
+    data-img="https://sugargeekshow.com/wp-content/uploads/2020/01/pink-velvet-cake-featured.jpg"
+    data-category="cakes"
+    data-ingredients="Cake:
+1 1/2 cups flour
+1 1/2 tsp baking powder
+1/2 tsp salt
+1/2 cup unsalted butter (room temp)
+1 cup granulated sugar
+3 large egg whites (room temp)
+1 tsp vanilla extract
+3/4 cup milk (room temp)
+Pink gel color
+Vanilla Buttercream:
+5 large egg whites
+1 1/2 cups granulated sugar
+1 1/2 cups unsalted butter (cubed, room temp)
+1 tsp clear vanilla extract"
+
+    data-directions="Preheat oven to 350°F and prepare three 6-inch cake pans.
+Mix flour, baking powder, and salt.
+Beat butter and sugar until fluffy.
+Add egg whites one at a time, then vanilla.
+Alternate adding dry ingredients and milk.
+Add pink gel color and mix gently.
+Bake for ~25 minutes, then cool completely."
+
+    data-tips="Make sure bowl is grease-free for stiff meringue.
+Buttercream may look curdled at first — keep whipping until smooth.
+Chill layers for cleaner frosting.">
+    Recipe
+  </button>
+</div>
+
+        <div class="recipe-card">
+          <img src="https://itsybitsykitchen.com/wp-content/uploads/2019/09/cherry-cupcakes.jpg" alt="Cherry Cupcakes" />
+          <h4>Cherry Cupcakes</h4>
+          <p>Cute pastel cupcakes topped with cherries 🍒</p>
+          <button class="recipe-btn"
+            data-title="Cherry Cupcakes"
+            data-img="https://itsybitsykitchen.com/wp-content/uploads/2019/09/cherry-cupcakes.jpg"
+             data-category="cakes"
+            data-ingredients="Cupcakes:
+1 cup all-purpose flour
+1 1/2 tsp baking powder
+1/2 tsp salt
+6 tbsp unsalted butter (room temp)
+1/2 cup granulated sugar
+3 egg whites
+1 tsp vanilla extract
+1/2 tsp almond extract
+1/2 cup whole milk
+Pink food coloring
+3/4 cup maraschino cherries (chopped)
+Frosting:
+12 tbsp unsalted butter
+3 1/2 – 4 cups powdered sugar
+3–6 tbsp milk or heavy cream
+2 tbsp maraschino cherry juice
+1/2 tsp vanilla extract
+1/4 tsp almond extract
+1/4 tsp salt
+Pink food coloring (optional)"
+             data-directions="Cupcakes:
+Preheat oven to 350°F and line muffin tray.
+Mix flour, baking powder, and salt.
+Beat butter and sugar until fluffy.
+Add egg whites one at a time, then vanilla and almond extract.
+Add dry ingredients and milk in stages.
+Fold in chopped cherries.
+Bake 15–20 minutes until cooked through.
+Cool completely.
+Frosting:
+Beat butter until smooth.
+Add powdered sugar, milk, cherry juice, vanilla, almond extract, and salt.
+Mix until smooth and fluffy.
+Adjust consistency with sugar or milk.
+Frost cooled cupcakes."
+              data-tips="Use clear vanilla for a brighter pink color.
+Pat cherries dry before adding to batter.
+Store at room temp for 2 days or freeze up to 3 months.">
+            Recipe
+          </button>
+        </div>
+
+        <div class="recipe-card">
+          <img src="https://www.goldencloud.co.za/-/media/Project/Tiger/Golden-Cloud/Golden-Cloud/Recipe/Waffles-recipe.jpeg?h=467&iar=0&w=525&hash=49212AF7058A992CABB3BE00D93AF198" alt="Cloud Waffles" />
+          <h4>Cloud Waffles</h4>
+          <p>Crispy waffles with cream and berries.</p>
+       <button class="recipe-btn"
+  data-title="Cloud Waffles"
+  data-category="desserts"
+  data-img="https://www.goldencloud.co.za/-/media/Project/Tiger/Golden-Cloud/Golden-Cloud/Recipe/Waffles-recipe.jpeg?h=467&iar=0&w=525&hash=49212AF7058A992CABB3BE00D93AF198"
+  data-ingredients="3 1/2 cups fresh milled soft white wheat flour
+4 Tbsp sugar
+2 Tbsp baking powder
+4 eggs
+3 1/2 cups buttermilk (or milk with a Tbsp of vinegar)
+1 cup oil or butter, melted
+2 tsp vanilla"
+
+  data-directions="Preheat waffle maker to medium or medium-high heat.
+Preheat oven to 170° or its lowest setting.
+Add all dry ingredients to your mixer bowl and mix gently.
+Add wet ingredients and incorporate.
+Grease waffle iron and cook 4–5 minutes until golden.
+Transfer waffles to oven rack to keep warm and crispy.
+Serve fresh and enjoy!"
+
+  data-tips="Allow extra waffles to cool completely.
+Store in a freezer bag and freeze.
+Toast later for quick breakfasts anytime!">
+  Recipe
+</button>
+        </div>
+
+        <div class="recipe-card">
+          <img src="https://preppykitchen.com/wp-content/uploads/2022/05/Chocolate-Strawberry-Cake-Blog1-1140x1330.jpg" alt="Chocolate Cake" />
+          <h4>Chocolate Strawberry Cake</h4>
+          <p>Rich chocolate sponge with strawberries 🍫🍓</p>
+          <button class="recipe-btn"
+            data-title="Chocolate Strawberry Cake"
+            data-img="https://preppykitchen.com/wp-content/uploads/2022/05/Chocolate-Strawberry-Cake-Blog1-1140x1330.jpg"
+             data-category="cakes"
+            data-ingredients="Cake:
+½ cup unsweetened cocoa powder
+1 cup hot water or coffee
+3 cups all-purpose flour
+2½ cups sugar
+2½ tsp baking soda
+1½ tsp baking powder
+1 tsp salt
+1 cup vegetable oil
+1 cup buttermilk (room temp)
+3 eggs (room temp)
+1 tbsp vanilla extract
+Strawberry Buttercream:
+1½ cups butter (room temp)
+Pinch of salt
+6–8 cups powdered sugar
+½ cup chopped fresh strawberries"
+             data-directions="Chocolate Cake:
+Preheat oven to 350°F and prepare cake pans.
+Mix cocoa with hot water/coffee and let cool.
+Combine dry ingredients in a bowl.
+Whisk oil, buttermilk, eggs, and vanilla into cocoa mixture.
+Combine wet and dry ingredients.
+Bake for ~30 minutes and cool completely."
+             data-tips="Sift cocoa powder for smooth texture.
+Chill cake before adding ganache for clean drips.
+You can use strawberry jam instead of fresh strawberries for stronger flavor.">
+            Recipe
+          </button>
+        </div>
+
+        <div class="recipe-card">
+          <img src="https://i0.wp.com/www.themissinglokness.com/wp-content/uploads/2024/03/BJG_2776n.jpg?w=900&ssl=1" alt="Pudding" />
+          <h4>Strawberry Milk Pudding</h4>
+          <p>Creamy strawberry dessert 🍓</p>
+          <button class="recipe-btn"
+            data-title="Strawberry Milk Pudding"
+            data-img="https://i0.wp.com/www.themissinglokness.com/wp-content/uploads/2024/03/BJG_2776n.jpg?w=900&ssl=1"
+             data-category="desserts"
+            data-ingredients="Milk Pudding:
+2 1/4 cups whole milk (divided)
+1 packet unflavored gelatin
+1/4 cup heavy cream
+1/4 cup sugar
+1/4 cup milk powder
+Strawberry Sauce:
+8 oz fresh strawberries
+3 tbsp sugar
+Zest of 1/2 lemon
+1/2 tbsp lemon juice"
+            data-directions="Milk Pudding:
+Pour 1/4 cup cold milk into a bowl and bloom gelatin for 10 minutes.
+Heat remaining milk, cream, sugar, and milk powder on medium-low heat.
+Add gelatin mixture and stir until fully dissolved (do not boil).
+Pour into cups and chill at least 4 hours until set.
+Strawberry Sauce:
+Chop strawberries.
+Cook with sugar, lemon zest, and lemon juice.
+Simmer for 15 minutes until thickened.
+Cool completely."
+              data-tips="Do not boil milk or texture will break.
+Use high-quality milk for best flavour.
+Let pudding fully set before adding sauce.
+Store chilled for up to 3 days.">
+            Recipe
+          </button>
+        </div>
+
+        <div class="recipe-card">
+          <img src="https://bakerstable.net/wp-content/uploads/2023/02/vanilla-cupcakes-with-vanilla-buttercream-frosting-21-e1677106518668.jpg" alt="Cupcakes" />
+          <h4>Vanilla Cupcakes</h4>
+          <p>Soft fluffy cupcakes 🧁</p>
+          <button class="recipe-btn"
+            data-title="Vanilla Cupcakes"
+            data-img="https://bakerstable.net/wp-content/uploads/2023/02/vanilla-cupcakes-with-vanilla-buttercream-frosting-21-e1677106518668.jpg"
+              data-category="cakes"
+            data-ingredients="Cupcakes:
+2 cups cake flour
+2 tsp baking powder
+3/4 tsp salt
+1 cup unsalted butter (room temp)
+1 cup sugar
+4 eggs (room temp)
+1 1/2 tsp vanilla extract
+7/8 cup buttermilk
+Frosting:
+1 1/2 cups salted butter (room temp)
+3 cups powdered sugar (sifted)
+3 tbsp heavy cream
+3/4 tsp vanilla extract"
+             data-directions="Cupcakes:
+Preheat oven to 350°F and line cupcake tray.
+Mix flour, baking powder, and salt.
+Beat butter and sugar until light and fluffy.
+Add eggs one at a time.
+Alternate adding dry ingredients and buttermilk.
+Mix in vanilla.
+Bake for ~20 minutes and cool completely.
+Frosting:
+Beat butter and powdered sugar until creamy.
+Add cream and vanilla.
+Whip until light and fluffy.
+Pipe onto cooled cupcakes."
+
+             data-tips="Make cake flour substitute with flour + cornstarch if needed.
+Buttermilk can be made using milk + lemon juice or vinegar.
+Do not overmix batter for soft cupcakes.">
+            Recipe
+          </button>
+        </div>
+
+        <div class="recipe-card">
+          <img src="https://www.seriouseats.com/thmb/7tezOcTXh5YXcC2iOtRtEokYJg0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/20224--SEA-HoneyButterToast-RobbyLozano-hero-75efd541942241099e9ad482a9e525b2.jpg" alt="Toast" />
+          <h4>Honey Butter Toast</h4>
+          <p>Crispy golden toast 🍯</p>
+          <button class="recipe-btn"
+            data-title="Honey Butter Toast"
+            data-img="https://www.seriouseats.com/thmb/7tezOcTXh5YXcC2iOtRtEokYJg0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/20224--SEA-HoneyButterToast-RobbyLozano-hero-75efd541942241099e9ad482a9e525b2.jpg"
+            data-category="desserts"
+            data-ingredients="1 loaf Shokupan or Brioche bread
+180g butter (salted or unsalted)
+175g light brown sugar
+90g honey
+Pinch of flaky sea salt"
+              data-directions="Preheat oven to 180°C / 360°F.
+Slice bread into thick pieces.
+Mix butter, brown sugar, honey, and salt into a smooth paste.
+Remove crusts and coat bread with mixture.
+Place on parchment-lined tray.
+Bake 8 minutes, flip, then bake another 8 minutes.
+Cool for 10–15 minutes before serving."
+              data-tips="Serve with ice cream or coffee for best taste.
+Use demerara sugar for extra crunch.
+Do not eat immediately after baking — very hot sugar mixture.
+Best served fresh; do not store long.">
+            Recipe
+          </button>
+        </div>
+
+<div class="recipe-card">
+  <img src="https://www.cookingclassy.com/wp-content/uploads/2024/05/strawberry-milkshake-4-730x1095.jpg" alt="Strawberry Milkshake" />
+  <h4>Strawberry Milkshake</h4>
+  <p>Creamy blended strawberry drink 🍓</p>
+  <button class="recipe-btn"
+    data-title="Strawberry Milkshake"
+    data-img="https://www.cookingclassy.com/wp-content/uploads/2024/05/strawberry-milkshake-4-730x1095.jpg"
+    data-category="drinks"
+    data-ingredients="1 cup strawberries
+2 scoops vanilla ice cream
+1/2 cup milk
+1 tbsp sugar (optional)"
+    data-directions="Add strawberries, ice cream, and milk into blender.
+Blend until smooth.
+Taste and add sugar if needed.
+Pour into glass and serve chilled."
+    data-tips="Use frozen strawberries for thicker texture.
+Add whipped cream on top for extra flavor.
+Best served immediately.">
+    Recipe
+  </button>
+</div>
+
+<div class="recipe-card">
+  <img src="https://cdn.loveandlemons.com/wp-content/uploads/2025/05/iced-coffee-recipe-580x729.jpg" alt="Iced Coffee" />
+  <h4>Iced Coffee</h4>
+  <p>Cold refreshing coffee over ice ☕</p>
+  <button class="recipe-btn"
+    data-title="Iced Coffee"
+    data-img="https://cdn.loveandlemons.com/wp-content/uploads/2025/05/iced-coffee-recipe-580x729.jpg"
+    data-category="drinks"
+    data-ingredients="1 cup brewed coffee (cooled)
+Ice cubes
+1/4 cup milk or cream
+Sugar or syrup (optional)"
+    data-directions="Brew coffee and let it cool.
+Fill glass with ice.
+Pour coffee over ice.
+Add milk and sweeten if desired.
+Stir and serve cold."
+    data-tips="Use strong coffee so it doesn't taste watered down.
+Freeze coffee into ice cubes for stronger flavor.
+Add vanilla syrup for café style taste.">
+    Recipe
+  </button>
+</div>
+
+<div class="recipe-card">
+  <img src="https://www.errenskitchen.com/wp-content/uploads/2014/08/lemon-Iced-Tea2-e1528899924932.jpg" alt="Lemon Iced Tea" />
+  <h4>Lemon Iced Tea</h4>
+  <p>Refreshing citrus iced tea 🍋</p>
+  <button class="recipe-btn"
+    data-title="Lemon Iced Tea"
+    data-img="https://www.errenskitchen.com/wp-content/uploads/2014/08/lemon-Iced-Tea2-e1528899924932.jpg"
+    data-category="drinks"
+    data-ingredients="1 black tea bag
+1 cup hot water
+Ice cubes
+1–2 lemon slices
+Honey or sugar to taste"
+    data-directions="Steep tea bag in hot water for 5 minutes.
+Remove tea bag and let it cool.
+Fill glass with ice.
+Pour tea over ice.
+Add lemon and sweeten to taste."
+    data-tips="Chill tea before serving for better taste.
+Use green tea for lighter flavor.
+Add mint leaves for freshness.">
+    Recipe
+  </button>
+</div>
+
+  <!-- breakfast -->
+  <div class="recipe-card">
+    <img src="https://cdn.loveandlemons.com/wp-content/uploads/2026/03/eggs-florentine-1-580x755.jpg" alt="Eggs Florentine" />
+    <h4>Eggs Florentine</h4>
+    <p>Poached eggs with spinach and creamy hollandaise 🍳</p>
+
+    <button class="recipe-btn"
+      data-title="Eggs Florentine"
+      data-img="https://cdn.loveandlemons.com/wp-content/uploads/2026/03/eggs-florentine-1-580x755.jpg"
+      data-category="breakfast"
+       data-ingredients="4 large eggs
+4 English muffins
+2 tablespoons white vinegar
+2 tablespoons unsalted butter
+1/4 cup heavy cream
+10 cups baby spinach
+Salt and pepper
+4 tablespoons butter (Hollandaise)
+4 egg yolks
+1 tablespoon lime juice
+1 tablespoon heavy whipping cream"
+
+      data-directions="Melt butter in a small saucepan.
+In a bowl, beat egg yolks, lime juice, cream, salt, and pepper.
+Slowly temper eggs by adding hot butter gradually while stirring.
+Return mixture to saucepan and cook briefly until smooth.
+POACH EGGS:
+Heat water until just below boiling.
+Add vinegar.
+Crack eggs into small dish.
+Create a gentle whirlpool and pour egg into center.
+Cook 3–4 minutes for runny yolk.
+Remove with slotted spoon.
+COOK SPINACH:
+Melt butter in pan over low heat.
+Add cream and simmer until slightly thickened.
+Add spinach and cook until wilted (2–3 min).
+Season with salt and pepper."
+  data-tips="Do not boil water when poaching eggs — keep it just below boiling.
+Temper eggs slowly to avoid curdling.
+Serve immediately for best texture.
+Hollandaise can break if overheated — keep heat low.">
+      Recipe
+    </button>
+  </div>
+
+  <!-- Challah French Toast -->
+  <div class="recipe-card">
+    <img src="https://cdn.loveandlemons.com/wp-content/uploads/2024/08/french-toast-580x756.jpg" alt="Challah French Toast" />
+    <h4>Challah French Toast</h4>
+    <p>Thick, golden French toast made with challah bread 🍞</p>
+
+    <button class="recipe-btn"
+      data-title="Challah French Toast"
+      data-img="https://cdn.loveandlemons.com/wp-content/uploads/2024/08/french-toast-580x756.jpg"
+      data-category="breakfast"
+       data-ingredients="4 large eggs
+2/3 cup milk
+1 teaspoon vanilla extract
+1/2 teaspoon cinnamon
+Pinch of sea salt
+Butter or oil for frying
+8 thick slices brioche or challah bread
+Maple syrup or powdered sugar for serving"
+
+    data-directions="Whisk eggs, milk, vanilla, cinnamon, and salt in a shallow dish.
+Heat a nonstick pan or griddle over medium heat and add butter.
+Dip each bread slice into the mixture, coating both sides.
+Cook for about 2 minutes per side until golden brown.
+Reduce heat if needed to avoid burning.
+Cook in batches, adding more butter between batches.
+Serve warm with maple syrup or powdered sugar."
+
+    data-tips="Use thick brioche or challah for best texture.
+Don’t soak bread too long or it will fall apart.
+Cook on medium-low heat for even browning.
+Serve immediately for best taste.">
+
+      Recipe
+    </button>
+  </div>
+
+
+
+  <!-- Spinach Omelet -->
+  <div class="recipe-card">
+    <img src="https://i0.wp.com/smittenkitchen.com/wp-content/uploads/2023/12/rolled-spinach-omelet-11-scaled.jpg?resize=750%2C500&quality=89&ssl=1" alt="Spinach Omelet" />
+    <h4>Rolled Spinach Omelet</h4>
+    <p>Soft rolled omelet packed with spinach 🥬</p>
+
+    <button class="recipe-btn"
+      data-title="Rolled Spinach Omelet"
+      data-img="https://i0.wp.com/smittenkitchen.com/wp-content/uploads/2023/12/rolled-spinach-omelet-11-scaled.jpg?resize=750%2C500&quality=89&ssl=1"
+      data-category="breakfast"
+          data-ingredients="1 1/4 cup milk
+6 1/2 tbsp all-purpose flour
+10 large eggs
+1 7/8 tsp kosher salt
+Freshly ground black pepper
+12 oz frozen spinach (thawed and squeezed dry)
+4 scallions, minced
+1 1/4 cup gruyere cheese
+Optional: salad greens and tomatoes for garnish"
+
+    data-directions="Heat oven to 350°F (175°C) and line a sheet pan with parchment.
+Whisk milk and flour until smooth.
+Add eggs, salt, and pepper and mix well.
+Stir in spinach and scallions.
+Pour mixture into prepared pan.
+Bake 10–12 minutes until mostly set.
+Sprinkle cheese on top and bake 2–3 more minutes.
+Remove and slide onto rack.
+Roll from the short end using parchment to help form a tight roll.
+Transfer to plate and slice.
+Garnish if desired."
+
+    data-tips="Squeeze spinach very dry to avoid watery omelette.
+Roll while warm so it doesn’t crack.
+Don’t overbake — keeps it soft and flexible.">
+      Recipe
+    </button>
+  </div>
+
+
+
+  <!-- Egg Sandwich -->
+  <div class="recipe-card">
+    <img src="https://alexandracooks.com/wp-content/uploads/2021/02/eggsaladsandwich3_alexandraskitchen.jpg" alt="Egg Sandwich" />
+    <h4>Sliced Egg Sandwich</h4>
+    <p>Simple creamy egg sandwich 🥪</p>
+
+    <button class="recipe-btn"
+      data-title="Sliced Egg Sandwich"
+      data-img="https://alexandracooks.com/wp-content/uploads/2021/02/eggsaladsandwich3_alexandraskitchen.jpg"
+      data-category="breakfast"
+      data-ingredients="6 eggs
+1/4 cup mayonnaise
+1/3 cup diced celery
+6 scallions (thinly sliced)
+2–3 tbsp pickle juice
+Sea salt (to taste)
+Black pepper (to taste)
+4 slices bread (sourdough or peasant bread)
+Sprouts or lettuce (Bibb, Boston, or mesclun)"
+
+    data-directions="Steam eggs for 10 minutes over simmering water.
+Transfer eggs to an ice bath to cool.
+In a bowl, mix mayonnaise, celery, scallions, and 2 tbsp pickle juice.
+Peel and chop eggs, then add to mixture.
+Season with salt and pepper.
+Mash or leave chunky depending on preference.
+Adjust seasoning with more pickle juice or mayo if needed.
+Spread egg salad onto bread slices.
+Top with sprouts or lettuce.
+Close sandwich, slice in half, and serve."
+
+    data-tips="Steam eggs instead of boiling for easier peeling.
+Chill eggs before mixing for best texture.
+Add pickle juice gradually to control tanginess.
+Best eaten fresh but can be refrigerated for 3–5 days.">
+      Recipe
+    </button>
+  </div>
+      </div>
+    </section>
+
+<footer class="footer">
+  <div class="footer-content">
+  <p class="project-credit">
+  Designed & developed by Miksha G • Deployed with Netlify
+</p>
+
+  <div class="footer-bottom">
+    <span>© 2026 </span>
+    <span>Built for food lovers</span>
+  </div>
+</footer>
+
+  </div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,445 @@
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(to bottom, #ffe6f0, #fff5f8);
+  font-family: "Fredoka", sans-serif;
+}
+
+/* APP CONTAINER */
+
+.recipe-app {
+  background: #fff0f5;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+
+  border: 3px solid #ffb7d5;
+  border-radius: 16px;
+
+  box-shadow: 6px 6px 0 #ffd1e6;
+}
+
+/* HEADER */
+
+header {
+  border-bottom: 2px dashed #ffb7d5;
+  padding-bottom: 25px;
+}
+
+h1 {
+  margin: 0;
+  color: #c95b8d;
+}
+
+/* SEARCH */
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 15px;
+
+  border: 2px solid #ffcce3;
+  border-radius: 10px;
+
+  box-shadow: 3px 3px 0 #ffe0ec;
+}
+
+.search-button {
+  background: #ff9ec7;
+  color: white;
+
+  border: 2px solid #ff7eb5;
+  border-radius: 10px;
+
+  padding: 15px 20px;
+  cursor: pointer;
+
+  box-shadow: 3px 3px 0 #ffd1e6;
+}
+
+/* HERO */
+
+.hero-card {
+  margin-top: 30px;
+
+  background: white;
+  border: 2px solid #ffcce3;
+  border-radius: 18px;
+
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 20px;
+
+  box-shadow: 4px 4px 0 #ffe0ec;
+}
+
+.hero-card img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.recipe-card button {
+  margin: 0 10px 10px;
+  background: #ff9ec7;
+
+  border: 2px solid #ff7eb5;
+  border-radius: 10px;
+
+  color: white;
+  padding: 8px 12px;
+}
+
+
+/* TEXT */
+
+.tag {
+  color: #ff6fa5;
+  font-size: 12px;
+}
+
+.hero-description {
+  color: #9c6b82;
+}
+
+.hero-card h2 {
+  color: #c95b8d;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.filter-btn {
+  background: #ebe9e9;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 0.2s;
+}
+
+.filter-btn.active {
+ color: #ff6fa5;
+  
+}
+
+/* GRID */
+
+.section-title {
+  margin-top: 30px;
+  color: #c95b8d;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* CARDS */
+
+.recipe-card {
+  background: white;
+  border: 2px solid #ffcce3;
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 4px 4px 0 #ffe0ec;
+
+  transition: 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 170px;          /* fixed uniform height */
+  object-fit: cover;      /* crops nicely like Pink Velvet Cake */
+  display: block;
+}
+
+.recipe-card h4 {
+  color: #c95b8d;
+  margin: 10px;
+}
+
+.recipe-card p {
+  color: #9c6b82;
+  margin: 0 10px 10px;
+  font-size: 13px;
+}
+
+.recipe-card button {
+  margin: 0 10px 10px;
+  background: #ff9ec7;
+
+  border: 2px solid #ff7eb5;
+  border-radius: 10px;
+
+  color: white;
+  padding: 8px 12px;
+}
+
+.recipe-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.section-box {
+  background: #fff;
+  border: 2px solid #ffcce3;
+  border-radius: 14px;
+
+  padding: 12px;
+
+  box-shadow: 3px 3px 0 #ffe0ec;
+}
+
+.section-box h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #c95b8d;
+}
+
+.section-box pre {
+  margin: 0;
+  white-space: pre-wrap;
+
+  font-family: inherit;
+  color: #9c6b82;
+  line-height: 1.5;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 4px 2px;
+  margin-top: 5px;
+}
+
+.footer-content {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-content h3 {
+  margin-bottom: 5px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  opacity: 0.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-credit{
+  font-size: 0.85rem;
+  color: #e78bebda;
+  margin-top: 12px;
+  letter-spacing: 0.3px;
+}
+
+.modal {
+    position: fixed;
+  top: 0;
+  left: 0;
+   width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px; /* IMPORTANT: prevents edge cutoff */
+  box-sizing: border-box;
+ z-index: 9999;
+  background: rgba(255, 182, 213, 0.4);
+
+}
+
+.hidden {
+  display: none;
+}
+
+/* FULLSCREEN CARD */
+.modal-content.fullscreen {
+  width: 95%;
+  height: 92vh;
+
+  background: #fff0f5;
+
+  border: 3px solid #ffb7d5;
+  border-radius: 18px;
+
+  box-shadow: 8px 8px 0 #ffd1e6;
+
+  position: relative;
+
+  padding: 20px;
+}
+
+/* GRID LAYOUT */
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 20px;
+
+  height: 100%;
+}
+
+/* IMAGE SIDE */
+.modal-grid img {
+  width: 100%;
+  height: 100%;
+  max-height: 90vh;
+  object-fit: cover;
+display: block;
+  border-radius: 16px;
+
+  border: 2px solid #ffcce3;
+  box-shadow: 4px 4px 0 #ffe0ec;
+}
+
+/* TEXT SIDE */
+.modal-info {
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.modal-info h2 {
+  color: #c95b8d;
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.modal-info p {
+  color: #9c6b82;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #ff9ec7;
+  color: white;
+
+  cursor: pointer;
+
+  box-shadow: 3px 3px 0 #ffd1e6;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 0 16px;
+}
+
+.filter-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+.filter-btn.active {
+  background: var(--accent);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .hero-card {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+
+   .modal-content.fullscreen {
+    height: 90vh;
+    max-height: 95vh;
+  }
+
+  .modal-grid {
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+  }
+
+  .modal-grid img {
+    height: 220px;
+    margin-bottom: 6px; /* removes “floating gap” feeling */
+  }
+
+  .modal-info {
+    padding: 6px 4px 0 4px; /* tighter text block */
+  }
+
+  .modal-info h2 {
+    margin-bottom: 40px;
+  }
+
+  .modal-info p {
+    margin-top: 0;
+    line-height: 1.5;
+  }
+}
+
+    .search-form {
+    flex-direction: column;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+body {
+  overflow-x: hidden;
+}
+  .section-title {
+    text-align: center;
+    font-size: 15px;
+    padding: 0 16px;
+  }
+
+  .filters {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
