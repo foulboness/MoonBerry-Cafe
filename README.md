@@ -2,10 +2,6 @@
 
 A modern and responsive café website built to showcase MoonBerry Café’s menu, atmosphere, and unique coffee experience. Designed with a clean UI, smooth navigation, and mobile-friendly responsiveness to create an engaging experience for visitors.
 
-## 🌐 Live Demo
-
-[MoonBerry Café Live Site](https://moonberry-cafe.netlify.app/)
-
 ---
 
 ## ✨ Features
@@ -71,10 +67,8 @@ This project is deployed on Netlify.
 
 💜 Creator Credit
 
-Created by MoonBerry Café
-
-Live Site: https://moonberry-cafe.netlify.app/
-GitHub: @foulboness
+* Live Site: https://moonberry-cafe.netlify.app/
+* GitHub: @foulboness
 
 A shoutout, tag, or credit is always appreciated ☕✨
 
