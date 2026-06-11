@@ -24,12 +24,6 @@ A modern and responsive café website built to showcase MoonBerry Café’s menu
 
 ---
 
-## 📸 Preview
-
-<img width="1136" height="804" alt="Screenshot 2026-05-23 235154" src="https://github.com/user-attachments/assets/2e23b45e-169f-47f6-9643-5920c2167970" />
-
----
-
 ## 📂 Project Structure
 
 ```bash
