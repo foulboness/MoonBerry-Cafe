@@ -1,22 +1,21 @@
-# MoonBerry Café ☕🌙
+# MoonBerry Café ☕
 
 A modern and responsive café website built to showcase MoonBerry Café’s menu, atmosphere, and unique coffee experience. Designed with a clean UI, smooth navigation, and mobile-friendly responsiveness to create an engaging experience for visitors.
 
 ---
 
-## ✨ Features
+## Features
 
 * Responsive design for mobile, tablet, and desktop
-* Modern café-themed UI
+* Hello Kitty themed UI
 * Smooth and clean navigation
-* Interactive menu section
 * Beautiful hero section and branding
 * Fast deployment using Netlify
 * Optimized layout and styling
 
 ---
 
-## 🛠️ Built With
+## Built With
 
 * HTML5
 * CSS3
@@ -45,21 +44,21 @@ moonberry cafe'/
 
 ---
 
-## 🎨 Design Inspiration
+## Design Inspiration
 
-MoonBerry Café was designed to create a cozy and modern digital café experience with elegant visuals and smooth user interaction.
+MoonBerry Café was designed to create a cozy and modern digital recipe experience with elegant visuals and smooth user interaction.
 
 ---
 
-## 📦 Deployment
+##Deployment
 
 This project is deployed on Netlify.
 
 ---
 
-## 🙌 Acknowledgements
+## Acknowledgements
 
-* Coffee shop UI inspirations
+* Recipe website UI inspirations
 * Open-source design resources
 * Netlify hosting platform
 
