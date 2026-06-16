@@ -24,7 +24,7 @@ A modern and responsive recipe website built to showcase, atmosphere. Designed w
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```bash
 moonberry cafe'/
@@ -44,7 +44,7 @@ MoonBerry Café was designed to create a cozy and modern digital recipe experien
 
 ---
 
-##Deployment
+## Deployment
 
 This project is deployed on Netlify.
 
