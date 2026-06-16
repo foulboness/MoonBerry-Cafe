@@ -1,4 +1,4 @@
-# MoonBerry Café ☕
+# Recipe Website
 
 A modern and responsive recipe website built to showcase, atmosphere. Designed with a clean UI, smooth navigation, and mobile-friendly.
 
