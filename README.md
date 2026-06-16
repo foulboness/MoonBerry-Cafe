@@ -1,6 +1,6 @@
 # MoonBerry Café ☕
 
-A modern and responsive café website built to showcase MoonBerry Café’s menu, atmosphere, and unique coffee experience. Designed with a clean UI, smooth navigation, and mobile-friendly responsiveness to create an engaging experience for visitors.
+A modern and responsive recipe website built to showcase, atmosphere. Designed with a clean UI, smooth navigation, and mobile-friendly.
 
 ---
 
